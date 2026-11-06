@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "vinculo": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["--disable-warning=ExperimentalWarning", "src/complemento/servidor-mcp.ts"]
+    }
+  }
+}

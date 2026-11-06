@@ -1,0 +1,36 @@
+{
+  "name": "vinculo-protocol",
+  "version": "0.1.0",
+  "description": "Prototipo del protocolo Vínculo: comunicación cifrada entre agentes de IA, con identidad soberana de las personas.",
+  "license": "Apache-2.0",
+  "author": "Maximiliano Rovelli",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "demo": "node --disable-warning=ExperimentalWarning demo/demo.ts",
+    "demo:claude": "node --disable-warning=ExperimentalWarning demo/demo.ts --claude",
+    "demo:red": "node --disable-warning=ExperimentalWarning demo/red-de-prueba.ts",
+    "demo:xrpl": "node --disable-warning=ExperimentalWarning demo/identidad-xrpl.ts",
+    "xrpl:registrar": "node --disable-warning=ExperimentalWarning demo/registrar-en-xrpl.ts",
+    "complemento": "node --disable-warning=ExperimentalWarning src/complemento/servidor-mcp.ts",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/**/*.test.ts\"",
+    "tipos": "tsc --noEmit",
+    "ca-simulada": "bash scripts/generar-ca-simulada.sh"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "xrpl": "^5.3.0"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^1.4.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.6.7"
+  }
+}
